@@ -1,0 +1,47 @@
+// .distributionContainer {}
+
+#total-locked {
+    padding: 8px 16px;
+    background-color: rgba(118, 209, 191, 0.08);
+    border-radius: 9px;
+
+    .value-label {
+        color: rgba(64, 64, 64, 1);
+    }
+
+    .percent-label {
+        color: rgba(21, 199, 62, 1)
+    }
+
+    .period-label {
+        color: rgba(62, 129, 109, 1)
+    }
+}
+
+#label-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    padding: 5px;
+    display: inline-block;
+    line-height: 7px;
+    margin-right: 10px;
+}
+
+.table-headings {
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.table-data {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+#dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}

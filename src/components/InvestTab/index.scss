@@ -1,0 +1,56 @@
+#coming-soon-overlay {
+    background: rgba(0, 52, 42, 0.8);
+    border-radius: 0px 0px 10px 10px;
+    color: white;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    .coming-soon-wrapper {
+        margin: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        .icon {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .main-text {
+            font-weight: 800;
+            margin-bottom: 8px;
+            font-family: "OpenSans";
+        }
+
+        .secondary-text {
+            line-height: 1.2;
+            margin-bottom: 8px;
+            font-family: "OpenSans";
+        }
+
+        .action-button {
+            background: #76D1BF;
+            border-radius: 10px;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 8px 16px;
+            width: 50%;
+            margin-top: 8px;
+            font-family: "OpenSans";
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #coming-soon-overlay {
+        .coming-soon-wrapper {
+            .action-button {
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.portfolio-performance {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    font-family: "OpenSans";
+}
+
+.strategy-performance {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 33px;
+    font-family: "OpenSans";
+}
+
+.current-balance {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "OpenSans";
+}
+
+.current-balance-number {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 20px;
+    font-family: "OpenSans";
+}
+
+.current-balance-percent-change {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "OpenSans";
+}
+
+.positive {
+    color: #15C73E;
+    font-family: "OpenSans";
+}
+
+.negative {
+    color: #E25656;
+    font-family: "OpenSans";
+}
+
+#table-headings {
+    font-weight: 700;
+    font-family: "OpenSans";
+}
+
+#table-headings-portfolio {
+    font-weight: 700;
+    border-bottom: none;
+    font-family: "OpenSans";
+}
+
+#noBorder {
+    border-bottom: none;
+    font-family: "OpenSans";
+}
+
+#tableCells {
+    font-family: "OpenSans";
+}
+
+#dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@media (max-width: 800px) {
+    #dot {
+        height: 8px;
+        width: 8px;
+    }
+}

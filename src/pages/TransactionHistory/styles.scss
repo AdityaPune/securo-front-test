@@ -1,0 +1,32 @@
+.css-1ucdrps-MuiSelect-select-MuiInputBase-input-MuiInput-input {
+    &:focus {
+        background-color: rgba(0, 0, 0, 0);
+        outline: none;
+    }
+}
+
+// input[type="date"]:not(#date-input--has-value):before {
+//     content: attr(placeholder);
+// }
+
+input[type="date"]#date-input--has-no-value::-webkit-calendar-picker-indicator {
+    background: url(../../assets/images/icons/calendar.svg);
+}
+
+input[type="date"]#date-input--has-value::-webkit-calendar-picker-indicator {
+    background: url(../../assets/images/icons/calendar.svg);
+}
+
+input[type="date"]#date-input--has-no-value::-webkit-datetime-edit-text,
+input[type="date"]#date-input--has-no-value::-webkit-datetime-edit-month-field,
+input[type="date"]#date-input--has-no-value::-webkit-datetime-edit-day-field,
+input[type="date"]#date-input--has-no-value::-webkit-datetime-edit-year-field {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+input[type="date"]#date-input--has-value::-webkit-datetime-edit-text,
+input[type="date"]#date-input--has-value::-webkit-datetime-edit-month-field,
+input[type="date"]#date-input--has-value::-webkit-datetime-edit-day-field,
+input[type="date"]#date-input--has-value::-webkit-datetime-edit-year-field {
+    color: black;
+}

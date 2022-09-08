@@ -1,0 +1,80 @@
+.invest {
+    padding: 8px;
+    cursor: pointer;
+
+    .product-label-container {
+        // margin-top: 16px;
+        // margin-bottom: 24px;
+
+        .product-label {
+            font-size: 20px;
+            color: #424242;
+            font-weight: 700;
+            font-family: 'OpenSans';
+        }
+
+        .product-short-desc {
+            font-size: 14px;
+            font-weight: 400;
+            color: #2E3836;
+            font-weight: 400;
+            font-family: 'OpenSans';
+        }
+    }
+
+    .product-composition {
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        .strategy-composition {
+            font-size: 14px;
+            color: #2E3836;
+            font-weight: 700;
+            font-family: 'OpenSans';
+        }
+
+        .strategy-composition-img {
+            margin-top: 8px;
+        }
+    }
+}
+
+.investment-strategies {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    font-family: 'OpenSans';
+}
+
+.asset-allocation {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 161.68%;
+    font-family: 'OpenSans';
+}
+
+.allocation-percentage {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: 'OpenSans';
+}
+
+.assets {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: 'OpenSans';
+}
+
+@media (min-width: 600px) {
+    .invest {
+        height: 740px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .invest {
+        height: 850px;
+    }
+}

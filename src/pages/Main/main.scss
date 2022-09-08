@@ -1,0 +1,106 @@
+.main-page-wrapper {
+    margin-left: 74px;
+    margin-top: 90px;
+    font-family: "OpenSans";
+}
+
+#welcome-text {
+    font-size: 64px;
+    font-weight: 600;
+    color: #2D433E;
+    white-space: pre;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+#welcome-desc {
+    margin-top: 0px;
+    font-weight: 400;
+    color: #2E3836;
+}
+
+#login-container {
+    background-color: rgba(248, 247, 247, 1);
+    width: 80%;
+    padding: 32px 32px;
+    margin-top: 10px;
+}
+
+#login-title-container {
+    padding: 16px;
+
+    .SignIn {
+        font-size: 32px;
+    }
+}
+
+#forget-password {
+    cursor: pointer;
+    color: rgba(96, 96, 96, 1) !important
+}
+
+@media (max-width: 600px) {
+    .main-page-wrapper {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    #welcome-text {
+        font-size: 24px;
+        text-align: center;
+        padding-right: 30px;
+    }
+
+    #login-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        padding-right: 20px;
+        padding-left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #login-title-container {
+        padding: 16px;
+
+        .SignIn {
+            font-size: 25px;
+        }
+    }
+
+    #welcome-desc {
+        font-size: 14px;
+        text-align: center;
+        padding-right: 30px;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 990px) {
+
+    .main-page-wrapper {
+        margin-top: 0px;
+        margin-left: 0px;
+        // margin-left: 74px;
+    }
+
+    #login-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    }
+
+    #welcome-desc {
+        text-align: center;
+        padding-right: 70px;
+    }
+
+    #welcome-text {
+        font-size: 35px;
+        text-align: center;
+        padding-right: 70px;
+    }
+
+}

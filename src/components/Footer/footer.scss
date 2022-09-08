@@ -1,0 +1,33 @@
+.footer-container {
+    background-image: url("../../assets/images/common/Footer.svg");
+    height: 100%;
+
+    .footer-container-wrapper{
+        position: absolute;
+        bottom: 0px;
+        height: 110px;
+        width: 100%;
+
+        .divider{
+            border-color: white !important; 
+            border-right-width: 1.5px !important;
+            height: 80%;
+        }
+
+        .footer-item {
+            margin: 0px 32px;
+            color: #ffffff;
+    
+            .footer-item-desc {
+                font-family: "BitBold";
+                font-weight: 200;
+                font-size: 12px;
+                letter-spacing: 5px ;
+            }
+
+            .footer-item-img {
+                height: 60px
+            }
+        }
+    }
+}
