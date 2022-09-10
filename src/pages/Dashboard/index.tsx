@@ -51,7 +51,7 @@ function Dashboard() {
     useState<boolean>(false);
 
   // const colorArray = ["#2D69A4", "#A42D65", "0E6919"];
-  const colorArray = ["#07F2C3", "#68B0FF", "#C307F2", "#F1936C"];
+  const colorArray = ["#F0B90B", "#4D58FF", "#F4EBFF", "#58E4C8"];
 
   let navigate = useNavigate();
 
@@ -168,8 +168,7 @@ function Dashboard() {
                       <PieChart
                         labels={labels}
                         series={series}
-                        // colors={["#2D69A4", "#A42D65", "#0E6919"]}
-                        colors={["#07F2C3", "#68B0FF", "#C307F2", "#F1936C"]}
+                        colors={["#F0B90B", "#4D58FF", "#F4EBFF", "#58E4C8"]}
                       />
                     </Grid>
                     <Grid item xs={12} sm={6} className="breakdown-list">
@@ -190,7 +189,7 @@ function Dashboard() {
                             <Grid item xs={2} className="percentage-container">
                               {Math.abs(
                                 (series[index] / Number(sum)) * 100
-                              ).toFixed(2)}
+                              ).toFixed(1)}
                               %
                             </Grid>
                           </Grid>
@@ -287,16 +286,14 @@ function Dashboard() {
                   )}
                 </div>
 
-                <div className="profile-row-button">
+                <div
+                  className="profile-row-button"
+                  onClick={() => routeChange("/verify")}
+                >
                   {userData?.status === "A" ? (
-                    <div></div>
+                    <></>
                   ) : (
-                    <div
-                      className="go-to-kyc"
-                      onClick={() => routeChange("/verify")}
-                    >
-                      Complete Now
-                    </div>
+                    <div className="go-to-kyc">Complete Now</div>
                   )}
                 </div>
               </Grid>
