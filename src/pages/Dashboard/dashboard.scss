@@ -395,25 +395,30 @@
 
         .left-side {
           .action {
-            font-family: "OpenSans";
+            font-family: "Inter";
             font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
+            font-weight: 500;
+            font-size: 14px;
             line-height: 20px;
-            /* identical to box height, or 125% */
+            /* identical to box height, or 143% */
 
-            color: #494949;
+            width: 65px;
+            height: 20px;
+
+            color: #101828;
           }
 
           .date {
-            font-family: "OpenSans";
+            font-family: "Inter";
             font-style: normal;
             font-weight: 400;
             font-size: 12px;
             line-height: 20px;
             /* identical to box height, or 167% */
 
-            color: #525252;
+            /* Gray/500 */
+
+            color: #667085;
           }
         }
 

@@ -17,8 +17,8 @@ import { useAuth } from "../../services/auth/authProvider";
 import { useNavigate } from "react-router-dom";
 
 import * as _ from "lodash";
-import DownIcon from "../../assets/images/common/down.svg";
-import UpIcon from "../../assets/images/common/up.svg";
+import DepositIcon from "../../assets/images/common/deposit.svg";
+import WithdrawIcon from "../../assets/images/common/withdraw.svg";
 import PositiveArrow from "../../assets/images/common/positivearrow.svg";
 import Complete from "../../assets/images/common/complete.svg";
 import Incomplete from "../../assets/images/common/incomplete.svg";
@@ -95,6 +95,7 @@ function Dashboard() {
 
   const getTimestampDetails = (transaction: string) => {
     // const res = transaction.split(" ");
+    // console.log(res);
     // return (
     //   res[2] +
     //   " " +
@@ -106,13 +107,42 @@ function Dashboard() {
     //   " " +
     //   (res[4].slice(0, 3) > "12" ? "PM" : "AM")
     // );
-    return new Date(transaction)
-      .toLocaleTimeString(undefined, {
-        hour12: true,
-        hour: "2-digit",
-        minute: "2-digit",
-      })
-      .toUpperCase();
+    const dict: { [key: string]: string } = {
+      "0": "Jan",
+      "1": "Feb",
+      "2": "March",
+      "3": "Apr",
+      "4": "May",
+      "5": "Jun",
+      "6": "Jul",
+      "7": "Aug",
+      "8": "Sep",
+      "9": "Oct",
+      "10": "Nov",
+      "11": "Dec",
+    };
+    const day = new Date(transaction).getUTCDate().toString();
+    const month = new Date(transaction).getMonth().toString();
+    const hour = new Date(transaction).getUTCHours().toString();
+    const minute = new Date(transaction).getUTCMinutes().toString();
+    const year = new Date(transaction).getUTCFullYear().toString();
+    // const day =
+
+    // console.log(res);
+    const hourInt: number = +hour;
+    const res =
+      day +
+      " " +
+      dict[month] +
+      ", " +
+      year +
+      " " +
+      hour +
+      ":" +
+      minute +
+      " " +
+      (hourInt > 12 ? "PM" : "AM");
+    return res;
   };
 
   return (
@@ -308,16 +338,24 @@ function Dashboard() {
 
               {userHasTransactions &&
                 recentTransactionData
-                  .slice(-5)
+                  .slice(-3)
                   .reverse()
                   .map((r, index: number) => {
                     return (
                       <div className="transaction-container">
                         <div className="left-side flex-row align-items-center">
                           <img
-                            src={r.actionType === "DEPOSIT" ? DownIcon : UpIcon}
+                            src={
+                              r.actionType === "DEPOSIT"
+                                ? DepositIcon
+                                : WithdrawIcon
+                            }
                             alt="upanddown"
-                            style={{ width: "24px", paddingBottom: "12px" }}
+                            style={{
+                              width: "40px",
+                              height: "40px",
+                              paddingBottom: "12px",
+                            }}
                           />
                           <div style={{ marginLeft: "8px" }}>
                             <Typography className="action">
