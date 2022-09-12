@@ -151,11 +151,19 @@ function Header() {
   }
 
   function AccountButtonComponent() {
+    const navigate = useNavigate();
+    const navigateToSettings = () => {
+      navigate("/settings");
+    };
     return (
       <div id="account-action-button">
         <div className={`content`}>
           <div className={"actions"}>
-            <img src={SettingsIcon} className={"utility-icon"} />
+            <img
+              src={SettingsIcon}
+              className={"utility-icon"}
+              onClick={() => navigateToSettings()}
+            />
             <img src={NotificationsIcon} className={"utility-icon"} />
             <div
               className={"account-picture"}

@@ -17,6 +17,8 @@ import { useAuth } from "../../services/auth/authProvider";
 import { useNavigate } from "react-router-dom";
 
 import * as _ from "lodash";
+import DepositMini from "../../assets/images/common/deposit-mini.svg";
+
 import DepositIcon from "../../assets/images/common/deposit.svg";
 import WithdrawIcon from "../../assets/images/common/withdraw.svg";
 import PositiveArrow from "../../assets/images/common/positivearrow.svg";
@@ -332,7 +334,14 @@ function Dashboard() {
               <Typography className="header">Transaction History</Typography>
               {!userHasTransactions && (
                 <div className="transaction-container">
-                  <h3>No Transactions made yet!</h3>
+                  <div className="header">No Transaction</div>
+                  <Typography className="statement">
+                    You haven't made any transaction yet
+                  </Typography>
+                  <div className="deposit-button">
+                    <img src={DepositMini} />
+                    <Typography>Deposit</Typography>
+                  </div>
                 </div>
               )}
 
