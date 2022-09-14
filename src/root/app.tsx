@@ -5,7 +5,7 @@ import {
   useLocation,
   Navigate,
   Outlet,
-  Location,
+  Location
 } from "react-router-dom";
 
 import Invest from "../pages/Invest";
@@ -31,8 +31,9 @@ import useRecentTransaction from "../hooks/transactions";
 import Product from "../pages/Product";
 import Dashboard from "../pages/Dashboard";
 import Portfolio from "../pages/Portfolio";
-import Settings from "../pages/SettingsPage";
 import AccountComponent from "../pages/My Profile";
+import Settings from "../pages/Settings";
+
 import useStrategyPerformance from "../hooks/strategyPerformance";
 import usePortfolioAllocation from "../hooks/portfolioAllocation";
 import TransactionHistory from "../pages/TransactionHistory";
@@ -59,9 +60,9 @@ function RequireAuth() {
 }
 
 function App() {
+  useGetProfile();
   useProducts();
   usePortfolio();
-  useGetProfile();
   useRecentTransaction();
   useStrategyPerformance();
   usePortfolioAllocation();
@@ -75,8 +76,7 @@ function App() {
 
   useEffect(() => {
     if (!user) {
-      if (
-        location.pathname === "/dashboard" ||
+      if (location.pathname === "/dashboard" ||
         location.pathname === "/invest" ||
         location.pathname === "/invest/LCI" ||
         location.pathname === "/invest/MWI" ||
@@ -90,12 +90,10 @@ function App() {
         dispatch(updateDestinationPage(location.pathname));
       }
     }
-  }, []);
+  }, [])
 
-  const status = useAppSelector(
-    (state) => state.inactivityStatus.inactiveStatus
-  );
-  const matches = useMediaQuery("(max-width:960px)");
+  const status = useAppSelector(state => state.inactivityStatus.inactiveStatus)
+  const matches = useMediaQuery('(max-width:960px)')
 
   const msg = useAppSelector((state) => state.message);
   const [messageText, setMessageText] = useState("");
@@ -119,10 +117,7 @@ function App() {
 
   return (
     <ViewBase>
-      <div
-        className="flex-row flex-content-center"
-        style={!matches ? { marginTop: "80px" } : {}}
-      >
+      <div className="flex-row flex-content-center" style={!matches ? { marginTop: "80px" } : {}}>
         {status && <AlertBox />}
         <Routes>
           <Route path="/" element={<Main />} />
@@ -136,15 +131,12 @@ function App() {
               <Route index={false} path=":symbol" element={<Product />} />
             </Route>
             <Route path="/reset-password" element={<ResetPassword />} />
-            <Route path="/portfolio-performance" element={<Portfolio />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route
-              path="/transaction-history"
-              element={<TransactionHistory />}
-            />
-            <Route path="/my-account" element={<AccountComponent />} />
+            <Route path="/portfolio-performance" element={< Portfolio />} />
+            <Route path="/transaction-history" element={<TransactionHistory />} />
+            <Route path="/my-account" element={< AccountComponent />} />
             <Route path="/verify" element={<DocSubmission />} />
             <Route path="/change-password" element={<ChangePassword />} />
+            <Route path="/settings" element={<Settings />} />
           </Route>
         </Routes>
       </div>

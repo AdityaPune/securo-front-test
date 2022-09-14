@@ -1,0 +1,32 @@
+.modal-paper {
+    max-width: 500px;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 24;
+    
+    border-radius: 15px !important;
+
+
+    .modal-content {
+        padding: 24px;
+    }
+
+
+    .cancel-setting {
+        position: absolute;
+        cursor: pointer;
+        right: -16px;
+        z-index: 1;
+        top: -16px;
+        width: 32px;
+        height: 32px;
+        border-radius: 99px;
+        background: #C4C4C4;
+        background-image: url("../../assets/images/icons/x.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

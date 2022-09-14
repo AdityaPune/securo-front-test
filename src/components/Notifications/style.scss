@@ -1,0 +1,48 @@
+.notifs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .header{
+        margin-top: 10px;
+        border-bottom: 1px solid #eaecf0;
+
+        .header-title{
+            // font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            color: #101828;
+        }
+        .header-subtitle{
+            // font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #667085;
+        }
+    }
+
+    .content{
+        margin-top: 20px;
+        .content-title{
+            // font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 28px;            
+            color: #101828;
+        }
+        .content-subtitle{
+            // font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #667085;
+
+        }
+    }
+}

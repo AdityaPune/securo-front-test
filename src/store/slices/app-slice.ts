@@ -1,5 +1,5 @@
-import { createSelector, createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../store";
+import { createSelector, createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../store';
 export interface IAppState {
     isResetPassword: boolean,
     userStatus: string | undefined,
@@ -47,4 +47,4 @@ export default appSlice.reducer;
 
 export const { updateIsResetPassword, updateUserStatus, updateDestinationPage, updateBusinessView, updateNonBusinessView } = appSlice.actions;
 
-export const getAppState = createSelector(baseInfo, app => app);
+export const getAppState = createSelector(baseInfo, (app) => app);

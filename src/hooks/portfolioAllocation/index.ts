@@ -18,7 +18,7 @@ function usePortfolioAllocation() {
     }, [])
 
     useEffect(() => {
-        if (user && (location.pathname === "/portfolio-performance")) {
+        if (user && (location.pathname === "/portfolio-performance" || location.pathname === "/transaction-history")) {
             findPortfolioAllocation();
         }
     }, [user, location])

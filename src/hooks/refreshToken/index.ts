@@ -1,6 +1,7 @@
 import { getToken } from "../../services/axios/refreshToken";
 import { useDispatch } from "react-redux";
 import { updateInactivityStatus } from "../../store/slices/inactivity-slice";
+import { useEffect } from "react";
 
 let time: any;
 let initialTime = new Date();
@@ -56,7 +57,10 @@ function useOnPageRefresh() {
         }
     }
 
-    onPageRefresh()
+    useEffect(() => {
+        onPageRefresh()
+    }, [])
+
 }
 
 export { useRefreshTokens, useOnPageRefresh };

@@ -351,7 +351,7 @@ function Dashboard() {
                   .reverse()
                   .map((r, index: number) => {
                     return (
-                      <div className="transaction-container">
+                      <div className="transaction-container-actual">
                         <div className="left-side flex-row align-items-center">
                           <img
                             src={
