@@ -1,5 +1,5 @@
 import './style.scss';
-import { Typography } from '@mui/material';
+import { Typography, Switch, Button } from '@mui/material';
 import {
   Table,
   Paper,
@@ -8,9 +8,18 @@ import {
   TableRow,
   TableCell,
   TableContainer,
+  Box,
 } from '@mui/material';
+import ToggleSwitch from './switch';
+import { useState } from 'react';
+import Discord from './Discord';
+import Telegram from './Telegram';
 
 function Notifications() {
+  const [tconnected, setTConnected] = useState(false);
+  const [sconnected, setSConnected] = useState(true);
+  const [dconnected, setDConnected] = useState(false);
+
   return (
     <div className="notifs-container">
       <div className="header">
@@ -33,7 +42,7 @@ function Notifications() {
       >
         <Table
           sx={{ minWidth: 650 }}
-          aria-label="simple tab<le"
+          aria-label="simple table"
           className="table"
         >
           <TableBody className="table-body">
@@ -42,20 +51,74 @@ function Notifications() {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               className="body-row"
             >
-              <TableCell
-                component="th"
-                scope="row"
-              >
-                Kelvin
+              <TableCell className="account">
+                <Telegram />
+                &nbsp;Telegram
               </TableCell>
-
-              <TableCell className="invest-button">
-                <span className="invest">Invest</span>
+              <TableCell className="toggle">
+                <ToggleSwitch sx={{ m: 1 }} />
+              </TableCell>
+              <TableCell className="button">
+                <div
+                  className={tconnected ? 'active-button' : 'inactive-button'}
+                >
+                  {tconnected ? <span>Disconnect</span> : <span>Connect</span>}
+                </div>
+              </TableCell>
+            </TableRow>
+            <TableRow
+              key={'slack'}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              className="body-row"
+            >
+              <TableCell className="account">
+                <Telegram />
+                &nbsp;Slack
+              </TableCell>
+              <TableCell className="toggle">
+                <ToggleSwitch sx={{ m: 1 }} />
+              </TableCell>
+              <TableCell className="button">
+                <div
+                  className={sconnected ? 'active-button' : 'inactive-button'}
+                >
+                  {sconnected ? <span>Disconnect</span> : <span>Connect</span>}
+                </div>
+              </TableCell>
+            </TableRow>
+            <TableRow
+              key={'discord'}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              className="body-row"
+            >
+              <TableCell className="account">
+                <Discord />
+                &nbsp;Discord
+              </TableCell>
+              <TableCell className="toggle">
+                <ToggleSwitch sx={{ m: 1 }} />
+              </TableCell>
+              <TableCell className="button">
+                <div
+                  className={dconnected ? 'active-button' : 'inactive-button'}
+                >
+                  {dconnected ? <span>Disconnect</span> : <span>Connect</span>}
+                </div>
               </TableCell>
             </TableRow>
           </TableBody>
         </Table>
       </TableContainer>
+      <div className="email">
+        <Typography className="header">Email notificaitions</Typography>
+        <div className="property">
+          <Typography className="notifs">
+            Get emails to find out what's going on when you're not online. You
+            can turn them off anytime.
+          </Typography>
+          <ToggleSwitch />
+        </div>
+      </div>
     </div>
   );
 }
